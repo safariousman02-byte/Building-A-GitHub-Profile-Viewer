@@ -5,29 +5,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Building A GitHub Profile Viewer</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
 
         <div class="container">
+        <h1>GitHub Profile Viewer</h1>
 
-            <h1>GitHub Profile Viewer</h1>
-
-            <div class="search-box">
-
-                <input type="text" placeholder="Enter GitHub profile name..." id="usernameInput">
-                <button id="searchBtn">Search</button>
-
-            </div>
-
-            <div class="result">
-
-                <div class="loading">Enter a username and click search</div>
-
-            </div>
-
+        <div class="search-box">
+            <input type="text" id="usernameInput" placeholder="Enter GitHub username...">
+            <button id="searchBtn">Search</button>
         </div>
+
+        <div id="result">
+            <div class="loading">Enter a username and click Search</div>
+        </div>
+    </div>
         
     </body>
+
+    <script src="/script.js"></script>
 
 </html>
