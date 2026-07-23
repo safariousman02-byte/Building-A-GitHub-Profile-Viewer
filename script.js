@@ -36,7 +36,32 @@ async function searchUser() {
 
         const repostData = await repostResponse.json();
 
+        let resposHTML = '';
+        if (repostData.length > 0) {
+            resposHTML = `<div class="repos">Recent Repositories</div>`;
+            for(let i=0;i<repostData.length; i++) {
+                const repo = repostData[i];
+                resposHTML += `
+                    <div class="repo-item">
+                        <span class="repo-name">${repo.name}</span>
+                        ${repo.language ? `<span class="repo-lang">${repo.language}</span>` : ''}
+                    </div>
+                `;
+            }
+            repoHTML += '</div>';
+        } else {
+            resposHTML = `
+            <div class="repo">
+                <h3>No public repository</h3>
+            </div>`;
+        }
+
+    } catch(error) {
+        resultDiv.innerHTML = `<div class="error">${error.message}</div>`;
+        console.error('Error!', error);
     }
 
 }
+
+searchBtn.onclick = searchUser;
 
