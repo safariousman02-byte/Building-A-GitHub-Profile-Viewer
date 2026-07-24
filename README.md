@@ -11,3 +11,5 @@
 ### On Completing The CSS Part
 
 ![alt](/src/p2.png)
+![alt](/src/p3.png)
+![alt](/src/p4.png)
